@@ -1,0 +1,272 @@
+[
+  {
+    "question": "How many vacation days do I get each year?",
+    "doc_id": "hr-pto",
+    "fact": "20 days"
+  },
+  {
+    "question": "When do I need a medical certificate for being ill?",
+    "doc_id": "hr-sick",
+    "fact": "more than 3 consecutive days"
+  },
+  {
+    "question": "How long is paid leave for a new parent who is the main caregiver?",
+    "doc_id": "hr-parental",
+    "fact": "16 weeks"
+  },
+  {
+    "question": "Which days is everybody expected to be in the office?",
+    "doc_id": "hr-remote",
+    "fact": "Tuesdays and Wednesdays"
+  },
+  {
+    "question": "How many public holidays does the company give?",
+    "doc_id": "hr-holidays",
+    "fact": "11 paid holidays"
+  },
+  {
+    "question": "At what point in the first three months is my first review?",
+    "doc_id": "hr-probation",
+    "fact": "day 60"
+  },
+  {
+    "question": "What do I earn if a friend I recommended gets hired?",
+    "doc_id": "hr-referral",
+    "fact": "$2,000"
+  },
+  {
+    "question": "How much money can I spend on training courses per year?",
+    "doc_id": "hr-learning",
+    "fact": "$1,500"
+  },
+  {
+    "question": "In which months do appraisals happen?",
+    "doc_id": "hr-review",
+    "fact": "June and December"
+  },
+  {
+    "question": "How many days off do I get when a close relative passes away?",
+    "doc_id": "hr-bereavement",
+    "fact": "5 paid days"
+  },
+  {
+    "question": "How often do I get a new work computer?",
+    "doc_id": "it-laptop",
+    "fact": "36 months"
+  },
+  {
+    "question": "How long does a VPN connection stay up before I have to sign in again?",
+    "doc_id": "it-vpn",
+    "fact": "12 hours"
+  },
+  {
+    "question": "How quickly will IT respond to a total network outage?",
+    "doc_id": "it-helpdesk",
+    "fact": "15 minutes"
+  },
+  {
+    "question": "Who needs to sign off before I can get a new application installed?",
+    "doc_id": "it-software",
+    "fact": "team lead and the security team"
+  },
+  {
+    "question": "What happens to a company phone after too many wrong PIN entries?",
+    "doc_id": "it-mobile",
+    "fact": "wiped after 10 failed"
+  },
+  {
+    "question": "How often are the production databases copied for safekeeping?",
+    "doc_id": "it-backup",
+    "fact": "every 4 hours"
+  },
+  {
+    "question": "How long are old messages kept before they disappear?",
+    "doc_id": "it-email",
+    "fact": "3 years"
+  },
+  {
+    "question": "How do visitors get internet access in the office?",
+    "doc_id": "it-wifi",
+    "fact": "guest Wi-Fi"
+  },
+  {
+    "question": "Is there a cap on how much I can print in color?",
+    "doc_id": "it-printing",
+    "fact": "100 pages"
+  },
+  {
+    "question": "When is my system access cut off when I quit?",
+    "doc_id": "it-offboarding",
+    "fact": "5:00 pm"
+  },
+  {
+    "question": "What is the minimum length for a password?",
+    "doc_id": "sec-password",
+    "fact": "14 characters"
+  },
+  {
+    "question": "Which second factor is required for people with admin rights?",
+    "doc_id": "sec-mfa",
+    "fact": "Hardware security keys"
+  },
+  {
+    "question": "How fast must I report a lost laptop to security?",
+    "doc_id": "sec-incident",
+    "fact": "within 1 hour"
+  },
+  {
+    "question": "How is customer card information categorized?",
+    "doc_id": "sec-classification",
+    "fact": "Restricted"
+  },
+  {
+    "question": "How soon after starting must I finish the security course?",
+    "doc_id": "sec-training",
+    "fact": "30 days"
+  },
+  {
+    "question": "Can a guest walk around the building alone?",
+    "doc_id": "sec-badge",
+    "fact": "escorted at all times"
+  },
+  {
+    "question": "How long do we have to fix a critical security hole?",
+    "doc_id": "sec-vuln",
+    "fact": "7 days"
+  },
+  {
+    "question": "What must a new supplier go through before we sign with them if they handle our data?",
+    "doc_id": "sec-vendor",
+    "fact": "security review"
+  },
+  {
+    "question": "How long do I have to file receipts for money I spent?",
+    "doc_id": "fin-expense",
+    "fact": "30 days"
+  },
+  {
+    "question": "What cabin class is allowed on a short flight?",
+    "doc_id": "fin-travel",
+    "fact": "Economy"
+  },
+  {
+    "question": "What is the daily food budget on a business trip?",
+    "doc_id": "fin-meals",
+    "fact": "$75 per day"
+  },
+  {
+    "question": "Who approves a $10,000 purchase?",
+    "doc_id": "fin-purchase",
+    "fact": "director approval"
+  },
+  {
+    "question": "How frequently am I paid?",
+    "doc_id": "fin-payroll",
+    "fact": "bi-weekly"
+  },
+  {
+    "question": "By what date must I reconcile my company card transactions each month?",
+    "doc_id": "fin-corpcard",
+    "fact": "5th of the following month"
+  },
+  {
+    "question": "What rate is paid for driving my own car for work?",
+    "doc_id": "fin-mileage",
+    "fact": "67 cents per mile"
+  },
+  {
+    "question": "How many days do we normally take to pay a vendor bill?",
+    "doc_id": "fin-invoice",
+    "fact": "net 45"
+  },
+  {
+    "question": "Where can employees park at the main office?",
+    "doc_id": "fac-parking",
+    "fact": "garage"
+  },
+  {
+    "question": "What happens to a reserved conference room nobody shows up to?",
+    "doc_id": "fac-booking",
+    "fact": "released automatically"
+  },
+  {
+    "question": "Can I come in on a Saturday?",
+    "doc_id": "fac-hours",
+    "fact": "manager request"
+  },
+  {
+    "question": "Where do we meet if the building is evacuated?",
+    "doc_id": "fac-emergency",
+    "fact": "east parking lot"
+  },
+  {
+    "question": "What must I do if I own shares in one of our suppliers?",
+    "doc_id": "leg-coi",
+    "fact": "disclose"
+  },
+  {
+    "question": "Up to what value can I keep a present from a supplier?",
+    "doc_id": "leg-gifts",
+    "fact": "$50"
+  },
+  {
+    "question": "How long do we have to answer a customer who wants their data deleted?",
+    "doc_id": "leg-privacy",
+    "fact": "30 days"
+  },
+  {
+    "question": "Can I report wrongdoing without giving my name?",
+    "doc_id": "leg-whistle",
+    "fact": "anonymously"
+  },
+  {
+    "question": "How long do we keep customer agreements once they end?",
+    "doc_id": "leg-retention",
+    "fact": "7 years"
+  },
+  {
+    "question": "How much extra pay is there for being the engineer on call?",
+    "doc_id": "eng-oncall",
+    "fact": "$400"
+  },
+  {
+    "question": "How many people must approve a change to payment code?",
+    "doc_id": "eng-review",
+    "fact": "two reviewers"
+  },
+  {
+    "question": "Can we push to production on a Friday?",
+    "doc_id": "eng-release",
+    "fact": "blocked"
+  },
+  {
+    "question": "How soon must the write-up of a major outage be published?",
+    "doc_id": "eng-postmortem",
+    "fact": "5 business days"
+  },
+  {
+    "question": "What uptime goal do we have for the tracking API?",
+    "doc_id": "eng-sla",
+    "fact": "99.9%"
+  },
+  {
+    "question": "How long does a new employee have a buddy assigned?",
+    "doc_id": "hr-onboarding",
+    "fact": "8 weeks"
+  },
+  {
+    "question": "At what point do teams get warned about cloud spending?",
+    "doc_id": "it-cloud",
+    "fact": "80%"
+  },
+  {
+    "question": "How frequently do we rotate encryption keys?",
+    "doc_id": "sec-encryption",
+    "fact": "12 months"
+  },
+  {
+    "question": "When are yearly budgets finalized?",
+    "doc_id": "fin-budget",
+    "fact": "November 15"
+  }
+]
