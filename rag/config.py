@@ -21,7 +21,7 @@ class Settings:
     chunk_overlap: int = 60
     top_k: int = 4
     min_score: float = 0.25                            # cosine similarity below this means "not in the knowledge base"
-    llm_model: str = "llama-3.3-70b-versatile"         # served by Groq when GROQ_API_KEY is set
+    llm_model: str = "openai/gpt-oss-120b"         # served by Groq when GROQ_API_KEY is set
 
     @classmethod
     def from_env(cls) -> "Settings":

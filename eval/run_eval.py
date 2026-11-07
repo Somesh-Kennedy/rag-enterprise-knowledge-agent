@@ -90,6 +90,8 @@ def main() -> None:
         llm = build_llm(settings.llm_model)
         if llm is None:
             raise SystemExit("--generate needs GROQ_API_KEY")
+        judge_name = os.environ.get("JUDGE_MODEL", settings.llm_model)       # grade with a different model than the one answering
+        judge = build_llm(judge_name)
         gen = KnowledgeAgent(store, llm, settings.top_k, settings.min_score)
         fact_in_answer = cited = judged = 0
         wrong = []
@@ -99,7 +101,7 @@ def main() -> None:
             ok_fact = q["fact"].lower() in ans.lower()
             fact_in_answer += ok_fact
             cited += f"[{q['doc_id']}]" in ans
-            verdict = llm.invoke(JUDGE.format(question=q["question"], fact=q["fact"], answer=ans)).content.strip().upper()
+            verdict = judge.invoke(JUDGE.format(question=q["question"], fact=q["fact"], answer=ans)).content.strip().upper()
             correct = verdict.startswith("YES")
             judged += correct
             if not correct:
@@ -108,6 +110,7 @@ def main() -> None:
         oos_refused = sum(1 for q in OUT_OF_SCOPE if gen.answer(q)["answer"].startswith(NOT_FOUND[:20]))
         results["generation"] = {
             "llm": settings.llm_model,
+            "judge": judge_name,
             "answers_judged_correct": f"{judged}/{n}",
             "exact_fact_string_in_answer": f"{fact_in_answer}/{n}",
             "cites_expected_doc": f"{cited}/{n}",

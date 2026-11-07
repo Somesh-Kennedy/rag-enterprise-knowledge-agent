@@ -3,7 +3,7 @@
 A retrieval-augmented question-answering service for internal company documents. Ask a question in plain words and get
 a short answer **with the source documents cited**, or a clear "I could not find this" when the knowledge base does not
 cover it. Built with **LangChain**, a vector store (**FAISS** locally, **Pinecone** optional), **FastAPI**, and an
-LLM served by **Groq**.
+LLM served by **Groq** (`openai/gpt-oss-120b`).
 
 > **The data is synthetic.** The 54 policy documents describe an invented company ("Harbor & Pine Logistics"). Nothing
 > here comes from a real employer, and no real customer or employee data is used.
@@ -41,8 +41,15 @@ embedding model on CPU. Re-run with `python -m eval.run_eval`.
 The five questions where the right document is not first are all vocabulary gaps, for example "vacation days" versus a
 document titled "Paid time off policy". A keyword (BM25) hybrid or a cross-encoder reranker is the obvious next step.
 
-Answer quality with the LLM (`python -m eval.run_eval --generate`) is graded by a second LLM call and string matching;
-the numbers are written to `eval/results.json` when you run it. See `eval/run_eval.py`.
+Answer quality with the LLM (`python -m eval.run_eval --generate`), answers by `openai/gpt-oss-120b` on Groq and graded
+by a different model (`qwen/qwen3.8-27b`) against the reference fact:
+
+| Metric | Result |
+|---|---|
+| Answers judged correct by the second model | **54 of 54** |
+| Reference fact appears word for word in the answer (strict string match) | 27 of 54 (the rest are paraphrases, e.g. "twenty" vs "20") |
+| Answer cites the expected document id | 52 of 54 |
+| Out-of-scope questions refused end to end | 10 of 10 |
 
 **Read these numbers carefully.** The documents and questions were written together, the corpus is small, and the 10
 out-of-scope questions are easy. This is a regression check for the pipeline, not a benchmark. The Pinecone backend uses
